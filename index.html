@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>New York Times</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron" style="background-color: #20315A ; color: white;">
+            <h1 class="text-center">
+                <strong>
+                    <i class="fa fa-newspaper-o"></i> New York Times</strong>
+            </h1>
+        </div>
+
+        <form>
+            <div class="row">
+                <div class="col-sm-12">
+                    <br>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2 class="panel-title"><i class="fa  fa-list-alt"></i>Search Parameters</h2>
+                        </div>
+                        <div class="panel-body">
+
+
+                            <form role="form">
+
+
+                                <div class="form-group">
+                                    <label for="search">Search Term:</label>
+                                    <input type="text" class="form-control" id="search-term">
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="pwd">Number of Records to Retrieve:</label>
+                                    <select class="form-control" id="num-records-select">
+                                        <option value="1">1</option>
+
+                                        <option value="5" selected>5</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="start-year">Start Year (Optional):</label>
+                                    <input type="text" class="form-control" id="start-year">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="end-year">End Year (Optional):</label>
+                                    <input type="text" class="form-control" id="end-year">
+                                </div>
+
+                                <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false"
+                                    autocomplete="off" id="search">
+                                    Search
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="article"></div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="nysearch.js"></script>
+
+</html>
